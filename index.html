@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        main {
+            padding: 20px;
+        }
+        img.panda {
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #fff;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Benvenuto nel sito Panda</h1>
+    </header>
+
+    <main>
+        <h2 style="color: #333;">🎶 Ascolta una melodia rilassante suonata per i panda!</h2>
+        <p><strong>Questo è un semplice esempio di pagina dedicata ai panda.</strong> Di seguito trovi alcune immagini adorabili!</p>
+        <img class="panda" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG" alt="Panda 1">
+        <img class="panda" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Panda_face.jpg" alt="Panda 2">
+        <img class="panda" src="https://upload.wikimedia.org/wikipedia/commons/4/46/Small_panda.JPG" alt="Panda 3">
+        
+        <!-- audio track -->
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Il tuo browser non supporta l'elemento audio.
+        </audio>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Panda Fans</p>
+    </footer>
+</body>
+</html>
