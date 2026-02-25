@@ -25,6 +25,12 @@
             height: auto;
             border-radius: 8px;
             margin: 20px 0;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
         footer {
             background-color: #fff;
@@ -38,11 +44,20 @@
 </head>
 <body>
     <header>
-        <h1>Benvenuto nel sito Panda</h1>
+        <h1 class="fade-in">Benvenuto nel sito Panda</h1>
     </header>
+    <style>
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 
     <main>
-        <h2 style="color: #333;">🎶 Ascolta una melodia rilassante suonata per i panda!</h2>
+        <h2 style="color: #333;" class="fade-in">🎶 Ascolta una melodia rilassante suonata per i panda!</h2>
         <p><strong>Questo è un semplice esempio di pagina dedicata ai panda.</strong> Di seguito trovi alcune immagini adorabili!</p>
         <img class="panda" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG" alt="Panda 1">
         <img class="panda" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Panda_face.jpg" alt="Panda 2">
