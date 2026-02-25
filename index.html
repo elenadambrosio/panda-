@@ -55,16 +55,50 @@
             background-color: #00695c;
             color: #fff;
             padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            /* keep footer at bottom but not fixed to allow scrolling*/
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        nav .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        nav .nav-list li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        nav .nav-list li a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        section {
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 class="fade-in">🐼🐼 Benvenuto nel sito Panda</h1>
+        <div class="container">
+            <h1 class="fade-in">🐼🐼 Benvenuto nel sito Panda</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Galleria</a></li>
+                    <li><a href="#info">Informazioni</a></li>
+                    <li><a href="#contact">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <style>
         .fade-in {
@@ -76,7 +110,8 @@
         }
     </style>
 
-    <main>
+    <main class="container">
+        <section id="home">
         <h2 style="color: #004d40; background-color:#a7ffeb; padding:10px; border-radius:5px;" class="fade-in">🎶 Ascolta una melodia rilassante suonata per i panda!</h2>
         <p><strong>Questo è un semplice esempio di pagina dedicata ai panda.</strong> Di seguito trovi alcune immagini adorabili!</p>
         <p>Ogni immagine è accompagnata da una breve spiegazione per aiutarti a capire meglio questi animali speciali. Scorri e leggi!</p>
@@ -126,6 +161,8 @@
             <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
             Il tuo browser non supporta l'elemento audio.
         </audio>
+        </section>
+        <section id="gallery">
         
         <section id="info" style="background-color:#b2dfdb; padding:15px; border-radius:8px; margin-top:20px;">
             <h3>📚 Informazioni sui panda</h3>
@@ -189,6 +226,10 @@
                 <img class="panda" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9Hv04jAB7t5I9dZwKbFt2FeLiv9Q7Sa9I5w&usqp=CAU" alt="Sentiero nel bosco" style="max-width:600px;">
                 <figcaption>Un sentiero nella foresta di bambù quando i panda si spostano.</figcaption>
             </figure>
+        </section>
+        <section id="contact" style="margin-top:40px;">
+            <h3>📬 Contatti</h3>
+            <p>Per maggiori informazioni visita il <a href="https://www.worldwildlife.org/species/giant-panda" target="_blank">sitoweb WWF</a> o invia una email a <a href="mailto:info@panda-fans.example">info@panda-fans.example</a>.</p>
         </section>
     </main>
 
