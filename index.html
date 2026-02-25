@@ -7,15 +7,18 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #e0f7fa;
             text-align: center;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         header {
-            background-color: #fff;
+            background-color: #00695c;
+            color: #fff;
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: slideDown 1s ease-out;
         }
         main {
             padding: 20px;
@@ -26,14 +29,29 @@
             border-radius: 8px;
             margin: 20px 0;
             animation: float 4s ease-in-out infinite;
+            border: 3px solid #fff;
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        #info ul li {
+            animation: fadeIn 1s ease-in-out forwards;
+            opacity: 0;
+        }
+        #info ul li:nth-child(1) { animation-delay: 0.5s; }
+        #info ul li:nth-child(2) { animation-delay: 1s; }
+        #info ul li:nth-child(3) { animation-delay: 1.5s; }
+        #info ul li:nth-child(4) { animation-delay: 2s; }
+        #info ul li:nth-child(5) { animation-delay: 2.5s; }
         footer {
-            background-color: #fff;
+            background-color: #00695c;
+            color: #fff;
             padding: 10px;
             position: fixed;
             width: 100%;
@@ -57,21 +75,20 @@
     </style>
 
     <main>
-        <h2 style="color: #333;" class="fade-in">🎶 Ascolta una melodia rilassante suonata per i panda!</h2>
+        <h2 style="color: #004d40; background-color:#a7ffeb; padding:10px; border-radius:5px;" class="fade-in">🎶 Ascolta una melodia rilassante suonata per i panda!</h2>
         <p><strong>Questo è un semplice esempio di pagina dedicata ai panda.</strong> Di seguito trovi alcune immagini adorabili!</p>
-        <img class="panda" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG" alt="Panda 1">
-        <img class="panda" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Panda_face.jpg" alt="Panda 2">
+        <p>Ogni immagine è accompagnata da una breve spiegazione per aiutarti a capire meglio questi animali speciali. Scorri e leggi!</p>
         <figure>
-            <img class="panda" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG" alt="Panda 1">
-            <figcaption>Panda gigante che si gode del bambù.</figcaption>
+            <img class="panda" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG" alt="Panda gigante">
+            <figcaption>Panda gigante che si gode del bambù. Vive nelle foreste montane cinesi.</figcaption>
         </figure>
         <figure>
-            <img class="panda" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Panda_face.jpg" alt="Panda 2">
-            <figcaption>Primo piano del dolce muso di un panda.</figcaption>
+            <img class="panda" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Panda_face.jpg" alt="Primo piano panda">
+            <figcaption>Primo piano del dolce muso di un panda. Il loro pelo è nero e bianco per mimetizzarsi nella neve.</figcaption>
         </figure>
         <figure>
-            <img class="panda" src="https://upload.wikimedia.org/wikipedia/commons/4/46/Small_panda.JPG" alt="Panda 3">
-            <figcaption>Un giovane panda rosso in natura.</figcaption>
+            <img class="panda" src="https://upload.wikimedia.org/wikipedia/commons/4/46/Small_panda.JPG" alt="Panda rosso">
+            <figcaption>Un giovane panda rosso in natura. Non è imparentato strettamente con il panda gigante.</figcaption>
         </figure>
         
         <!-- audio track -->
@@ -80,7 +97,7 @@
             Il tuo browser non supporta l'elemento audio.
         </audio>
         
-        <section id="info">
+        <section id="info" style="background-color:#b2dfdb; padding:15px; border-radius:8px; margin-top:20px;">
             <h3>📚 Informazioni sui panda</h3>
             <ul style="text-align:left; max-width:600px; margin: 0 auto;">
                 <li>I panda giganti sono originari della Cina e si nutrono quasi esclusivamente di bambù.</li>
